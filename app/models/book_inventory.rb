@@ -1,0 +1,2 @@
+class BookInventory < ApplicationRecord
+end
