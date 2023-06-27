@@ -8,4 +8,8 @@ class BooksController < ApplicationController
     rescue ActiveRecord::RecordNotFound
         redirect_to root_path
     end
+
+    def new
+        @book = BookInventory.new
+    end
 end
