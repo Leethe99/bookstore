@@ -1,5 +1,12 @@
 <h1>new book</h1>
 <%= form_with model: @book do |form|%>
+    <%if form.object.errors.any? %>
+        <div>
+            <% form.object.errors.full_messages.each do |message|%>
+                <%= message%>
+            <%end%>
+        </div>
+    <%end%>
     <div>
     <%= form.label :title%>
     <%= form.text_field :title%>
@@ -12,7 +19,7 @@
     </div>
     <div>
      <%= form.label :description%>
-    <%= form.text_area  :year%>
+    <%= form.text_area  :description%>
     </div>
     <%= form.button "add book"  %>
 
