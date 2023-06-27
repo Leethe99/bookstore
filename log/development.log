@@ -2121,3 +2121,12 @@ Processing by BooksController#new as HTML
 Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 3732)
 
 
+Started GET "/books/new" for 127.0.0.1 at 2023-06-27 15:07:53 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3466)
+Completed 200 OK in 12ms (Views: 11.0ms | Allocations: 3740)
+
+
