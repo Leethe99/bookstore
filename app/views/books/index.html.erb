@@ -8,7 +8,7 @@
 <body>
     <h1>Bookstore inventory</h1>
         <% @books.each do |i|%>
-            <h2><%= i.title %></h2>
+            <h2><%= link_to i.title, book_path(i.id) %></h2>
             <h3><%= i.year %></h3>
             <h3><%= i.author %></h3>
             <p><%= i.description %></p>
