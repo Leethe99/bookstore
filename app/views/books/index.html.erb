@@ -6,7 +6,13 @@
     <title>Bookstore</title>
 </head>
 <body>
-    <h1>Bookstore</h1>
+    <h1>Bookstore inventory</h1>
+        <% @books.each do |i|%>
+            <h2><%= i.title %></h2>
+            <h3><%= i.year %></h3>
+            <h3><%= i.author %></h3>
+            <p><%= i.description %></p>
+        <% end%>
 
 </body>
 </html>

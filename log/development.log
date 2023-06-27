@@ -522,3 +522,56 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 581ms (Views: 555.1ms | ActiveRecord: 3.6ms | Allocations: 44216)
 
 
+  [1m[36mBookInventory Load (0.5ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+Started GET "/" for 127.0.0.1 at 2023-06-27 11:32:37 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 220.0ms | Allocations: 33888)
+Completed 200 OK in 258ms (Views: 230.9ms | ActiveRecord: 0.0ms | Allocations: 38476)
+
+
+  [1m[36mBookInventory Load (0.5ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBookInventory Create (4.2ms)[0m  [1m[32mINSERT INTO "book_inventories" ("title", "author", "year", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "I'm Glad My Mom Died"], ["author", "Jennette McCurdy"], ["year", 2022], ["description", "m Glad My Mom Died is a memoir by American writer, director and former actress Jennette McCurdy."], ["created_at", "2023-06-27 17:49:20.533005"], ["updated_at", "2023-06-27 17:49:20.533005"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBookInventory Create (0.7ms)[0m  [1m[32mINSERT INTO "book_inventories" ("title", "author", "year", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eragon"], ["author", "Christopher Paolini"], ["year", 2002], ["description", "The book tells the story of a farm boy named Eragon, who finds a mysterious stone in the mountains. The stone is revealed to be a dragon egg, and a dragon he later names Saphira hatches from it."], ["created_at", "2023-06-27 17:52:09.228777"], ["updated_at", "2023-06-27 17:52:09.228777"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBookInventory Load (0.3ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+Started GET "/" for 127.0.0.1 at 2023-06-27 11:55:37 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.5ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 6247)
+  Rendered layout layouts/application.html.erb (Duration: 84.5ms | Allocations: 19381)
+Completed 200 OK in 100ms (Views: 89.9ms | ActiveRecord: 4.0ms | Allocations: 20863)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 11:56:40 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 3433)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.1ms | Allocations: 4262)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 11:57:23 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.4ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 854)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3461)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.4ms | Allocations: 4284)
+
+
