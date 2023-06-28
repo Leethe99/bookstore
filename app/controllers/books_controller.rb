@@ -1,12 +1,11 @@
 class BooksController < ApplicationController
+    before_action :set_book, only: [:show, :edit, :update, :destroy]
+
     def index
         @books = BookInventory.all
     end
     
     def show
-        @book = BookInventory.find(params[:id ])
-    rescue ActiveRecord::RecordNotFound
-        redirect_to root_path
     end
 
     def new
@@ -23,11 +22,9 @@ class BooksController < ApplicationController
     end
 
     def edit
-        @book = BookInventory.find(params[:id])        
     end
 
     def update
-        @book = BookInventory.find(params[:id])
         if @book.update(book_params)
             redirect_to @book
         else
@@ -35,10 +32,22 @@ class BooksController < ApplicationController
         end
     end
 
+    def destroy
+        @book.destroy
+        redirect_to root_path        
+    end
+
     private 
 
     def book_params
         params.require(:book_inventory).permit(:title, :author, :year, :description)
+    end
+
+    def set_book
+        @book = BookInventory.find(params[:id ])
+    rescue ActiveRecord::RecordNotFound
+        redirect_to root_path
+
     end
 
 end
