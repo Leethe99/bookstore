@@ -19,6 +19,19 @@ class BooksController < ApplicationController
             redirect_to root_path
         else 
             render :new, status: :unprocessable_entity 
+         end
+    end
+
+    def edit
+        @book = BookInventory.find(params[:id])        
+    end
+
+    def update
+        @book = BookInventory.find(params[:id])
+        if @book.update(book_params)
+            redirect_to @book
+        else
+            render :edit, status: :unprocessable_entity 
         end
     end
 

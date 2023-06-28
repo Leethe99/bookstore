@@ -2666,3 +2666,986 @@ Processing by BooksController#show as HTML
 Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 3082)
 
 
+Started GET "/books/4" for 127.0.0.1 at 2023-06-27 16:41:08 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBookInventory Load (0.3ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 2302)
+Completed 200 OK in 45ms (Views: 26.5ms | ActiveRecord: 2.7ms | Allocations: 3194)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2023-06-27 16:41:11 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2316)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 3062)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-27 16:49:56 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.9ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 1143)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 3474)
+Completed 200 OK in 56ms (Views: 49.5ms | ActiveRecord: 2.3ms | Allocations: 3743)
+
+
+Started GET "/books/2" for 127.0.0.1 at 2023-06-27 16:51:12 -0600
+  
+ArgumentError (Invalid route name, already in use: 'new_book' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/books/2" for 127.0.0.1 at 2023-06-27 16:52:33 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBookInventory Load (0.4ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 13170)
+Completed 200 OK in 44ms (Views: 27.3ms | ActiveRecord: 1.6ms | Allocations: 17614)
+
+
+Started GET "/books/2/edit" for 127.0.0.1 at 2023-06-27 16:52:37 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 753)
+
+
+  
+ActionController::MissingExactTemplate (BooksController#edit is missing a template for request formats: text/html):
+  
+actionpack (7.0.5) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.5) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.5) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.5) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.5) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.5) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.5) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.5) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.5) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.5) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.5) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.5) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.5) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.5) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.5) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.5) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.5) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.5) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.5) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/books/2/edit" for 127.0.0.1 at 2023-06-27 16:54:21 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2722)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 3528)
+
+
+Started GET "/books/2/edit" for 127.0.0.1 at 2023-06-27 17:49:08 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 291)
+  Rendered layout layouts/application.html.erb (Duration: 186.4ms | Allocations: 33587)
+Completed 200 OK in 210ms (Views: 192.5ms | ActiveRecord: 0.0ms | Allocations: 37502)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 09:11:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.6ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 64.0ms | Allocations: 6912)
+  Rendered layout layouts/application.html.erb (Duration: 177.6ms | Allocations: 40116)
+Completed 200 OK in 219ms (Views: 190.2ms | ActiveRecord: 3.5ms | Allocations: 44927)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2023-06-28 09:12:05 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 14.0ms | Allocations: 2771)
+  Rendered books/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 3030)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 5135)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 5499)
+
+
+Started GET "/books/2/edit" for 127.0.0.1 at 2023-06-28 09:15:36 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 21.4ms | Allocations: 8988)
+  Rendered books/edit.html.erb within layouts/application (Duration: 22.5ms | Allocations: 9232)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 9321)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 10134)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+    6:                 <%= message%>
+  
+app/views/books/_form.html.erb:3
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/2/edit" for 127.0.0.1 at 2023-06-28 09:17:54 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBookInventory Load (1.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.5ms | Allocations: 1073)
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1145)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1234)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.1ms | Allocations: 6875)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x0000000000ebf0>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/2/edit" for 127.0.0.1 at 2023-06-28 09:18:55 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.4ms | Allocations: 1125)
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1277)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1997)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x0000000000eec0>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-06-28 09:19:09 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 14610)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.2ms | Allocations: 14956)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2023-06-28 09:19:11 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2405)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 3217)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2023-06-28 09:19:15 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.4ms | Allocations: 1125)
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1278)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2011)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x0000000000f2d0>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/new" for 127.0.0.1 at 2023-06-28 09:19:23 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.8ms | Allocations: 1316)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1490)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3629)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3966)
+
+
+Started POST "/books" for 127.0.0.1 at 2023-06-28 09:19:25 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_inventory"=>{"title"=>"", "author"=>"", "year"=>"", "description"=>""}, "button"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 4.7ms | Allocations: 4648)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4757)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 6854)
+Completed 422 Unprocessable Entity in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 8284)
+
+
+Started GET "/books/3/edit" for 127.0.0.1 at 2023-06-28 09:19:32 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.5ms | Allocations: 1126)
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1278)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 2001)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x0000000000f640>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/3/edit" for 127.0.0.1 at 2023-06-28 09:20:08 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.5ms | Allocations: 1125)
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1277)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1997)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x0000000000f910>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/3/edit" for 127.0.0.1 at 2023-06-28 09:22:05 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBookInventory Load (0.6ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.2ms | Allocations: 1498)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1568)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 14470)
+Completed 200 OK in 39ms (Views: 22.2ms | ActiveRecord: 2.5ms | Allocations: 18916)
+
+
+Started PATCH "/books/3/edit" for 127.0.0.1 at 2023-06-28 09:22:17 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/3/edit"):
+  
+Started GET "/books/3/edit" for 127.0.0.1 at 2023-06-28 09:22:17 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.1ms | Allocations: 1355)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1418)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3549)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 4292)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 09:22:24 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1064)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3333)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 3604)
+
+
+Started GET "/books/5" for 127.0.0.1 at 2023-06-28 09:22:32 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2256)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 2999)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2023-06-28 09:22:36 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.1ms | Allocations: 1327)
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1390)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3487)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 4227)
+
+
+Started PATCH "/books/5/edit" for 127.0.0.1 at 2023-06-28 09:23:02 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/5/edit"):
+  
+Started GET "/books/5/edit" for 127.0.0.1 at 2023-06-28 09:23:02 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.6ms | Allocations: 1324)
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1387)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3518)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4258)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2023-06-28 09:23:18 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBookInventory Load (0.5ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.0ms | Allocations: 1071)
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1143)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1231)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.7ms | Allocations: 5648)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x000000000179a8>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/5/edit" for 127.0.0.1 at 2023-06-28 09:23:29 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.1ms | Allocations: 1453)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1523)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 14449)
+Completed 200 OK in 32ms (Views: 22.6ms | ActiveRecord: 1.2ms | Allocations: 18894)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2023-06-28 09:32:45 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBookInventory Load (0.5ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 12976)
+Completed 200 OK in 43ms (Views: 28.2ms | ActiveRecord: 1.0ms | Allocations: 17011)
+
+
+Started GET "/books/6" for 127.0.0.1 at 2023-06-28 09:38:38 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBookInventory Load (0.5ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 12879)
+Completed 200 OK in 46ms (Views: 32.5ms | ActiveRecord: 0.9ms | Allocations: 16855)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:38:43 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 6.8ms | Allocations: 1449)
+  Rendered books/edit.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1516)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3619)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 4365)
+
+
+Started PATCH "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:38:48 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/6/edit"):
+  
+Started GET "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:38:48 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBookInventory Load (0.3ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.3ms | Allocations: 1366)
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1429)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3560)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 4305)
+
+
+Started PATCH "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:38:49 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/6/edit"):
+  
+Started GET "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:38:49 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 4.2ms | Allocations: 1366)
+  Rendered books/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1429)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3560)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 4305)
+
+
+Started PATCH "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:39:36 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/books/6/edit"):
+  
+Started GET "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:39:36 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 4.3ms | Allocations: 1375)
+  Rendered books/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1438)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3570)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 4315)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:39:47 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBookInventory Load (1.9ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.0ms | Allocations: 1357)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1420)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3517)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 1.9ms | Allocations: 4261)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2023-06-28 09:41:46 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBookInventory Load (0.8ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.0ms | Allocations: 1071)
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1143)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1231)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.3ms | Allocations: 5651)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x00000000027830>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books" for 127.0.0.1 at 2023-06-28 09:41:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/books" for 127.0.0.1 at 2023-06-28 09:42:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+Started GET "/" for 127.0.0.1 at 2023-06-28 09:42:12 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.3ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1082)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 14206)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.3ms | Allocations: 14489)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2023-06-28 09:42:24 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.9ms | Allocations: 1333)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1398)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3509)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3793)
+
+
+Started POST "/books" for 127.0.0.1 at 2023-06-28 09:42:35 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_inventory"=>{"title"=>"whatsup", "author"=>"hello", "year"=>"12", "description"=>"sadmalksdmalsdmalsd"}, "button"=>""}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `create'
+  [1m[36mBookInventory Create (4.9ms)[0m  [1m[32mINSERT INTO "book_inventories" ("title", "author", "year", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "whatsup"], ["author", "hello"], ["year", 12], ["description", "sadmalksdmalsdmalsd"], ["created_at", "2023-06-28 15:42:35.054013"], ["updated_at", "2023-06-28 15:42:35.054013"]]
+  ↳ app/controllers/books_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 6.4ms | Allocations: 3331)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-28 09:42:35 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories"[0m
+  ↳ app/views/books/index.html.erb:10
+  Rendered books/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1043)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3318)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3592)
+
+
+Started GET "/books/10" for 127.0.0.1 at 2023-06-28 09:42:38 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2263)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3010)
+
+
+Started GET "/books/10" for 127.0.0.1 at 2023-06-28 09:44:32 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2674)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.1ms | Allocations: 3971)
+
+
+Started GET "/books/10/edit" for 127.0.0.1 at 2023-06-28 09:44:38 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1374)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1461)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2237)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x00000000028280>):
+    1: <h1>edit</h1>
+    2: 
+    3: <%= form_with model: @book do |form|%>
+    4:     <%if form.object.errors.any? %>
+    5:         <div>
+    6:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/edit.html.erb:3
+Started GET "/books/10/edit" for 127.0.0.1 at 2023-06-28 09:48:22 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1056)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 1776)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x00000000028550>):
+    1: <h1>edit</h1>
+    2: 
+    3: <%= form_with model: @book do |form|%>
+    4:     <%if form.object.errors.any? %>
+    5:         <div>
+    6:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/edit.html.erb:3
+Started GET "/books/10/edit" for 127.0.0.1 at 2023-06-28 09:51:27 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBookInventory Load (0.6ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.3ms | Allocations: 1529)
+  Rendered books/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1857)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms | Allocations: 3127)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x00000000028898>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/10" for 127.0.0.1 at 2023-06-28 09:51:31 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2712)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.1ms | Allocations: 3513)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2023-06-28 09:51:35 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 4.6ms | Allocations: 1318)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1493)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3598)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3926)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2023-06-28 09:53:06 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.6ms | Allocations: 1269)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1332)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3437)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 3710)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2023-06-28 09:53:13 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.6ms | Allocations: 1126)
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1278)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1998)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x00000000028ca8>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/1/edit" for 127.0.0.1 at 2023-06-28 10:04:47 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.1ms | Allocations: 1070)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1142)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1230)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.7ms | Allocations: 5235)
+
+
+  
+ActionView::Template::Error (undefined method `book_inventory_path' for #<ActionView::Base:0x0000000002ccb8>):
+    1: 
+    2: <%= form_with model: @book do |form|%>
+    3:     <%if form.object.errors.any? %>
+    4:         <div>
+    5:             <% form.object.errors.full_messages.each do |message|%>
+  
+app/views/books/_form.html.erb:2
+app/views/books/edit.html.erb:3
+Started GET "/books/1/edit" for 127.0.0.1 at 2023-06-28 10:07:53 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.0ms | Allocations: 1470)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1540)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 14482)
+Completed 200 OK in 36ms (Views: 26.0ms | ActiveRecord: 1.0ms | Allocations: 18930)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2023-06-28 10:07:55 -0600
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_inventory"=>{"title"=>"Almond", "author"=>"Won-pyung Sohn", "year"=>"2017", "description"=>"Almond follows the story of Yunjae, who was born with a brain condition called Alexithymia that makes it hard for him to feel emotions."}, "button"=>"", "id"=>"1"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1185)
+
+
+  
+NameError (undefined local variable or method `book_oarams' for #<BooksController:0x00000000030d18>):
+  
+app/controllers/books_controller.rb:31:in `update'
+Started GET "/books/1/edit" for 127.0.0.1 at 2023-06-28 10:08:15 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.6ms | Allocations: 1494)
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1564)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 14468)
+Completed 200 OK in 35ms (Views: 25.6ms | ActiveRecord: 1.0ms | Allocations: 18916)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2023-06-28 10:08:20 -0600
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_inventory"=>{"title"=>"Almond test", "author"=>"Won-pyung Sohn", "year"=>"2017", "description"=>"Almond follows the story of Yunjae, who was born with a brain condition called Alexithymia that makes it hard for him to feel emotions."}, "button"=>"", "id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mBookInventory Update (2.7ms)[0m  [1m[33mUPDATE "book_inventories" SET "title" = ?, "updated_at" = ? WHERE "book_inventories"."id" = ?[0m  [["title", "Almond test"], ["updated_at", "2023-06-28 16:08:20.959841"], ["id", 1]]
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms | Allocations: 3258)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2023-06-28 10:08:20 -0600
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2256)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3049)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2023-06-28 10:08:27 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.2ms | Allocations: 1368)
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1431)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3528)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 4273)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2023-06-28 10:08:30 -0600
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_inventory"=>{"title"=>"Almond", "author"=>"Won-pyung Sohn", "year"=>"2017", "description"=>"Almond follows the story of Yunjae, who was born with a brain condition called Alexithymia that makes it hard for him to feel emotions."}, "button"=>"", "id"=>"1"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mBookInventory Update (0.4ms)[0m  [1m[33mUPDATE "book_inventories" SET "title" = ?, "updated_at" = ? WHERE "book_inventories"."id" = ?[0m  [["title", "Almond"], ["updated_at", "2023-06-28 16:08:30.730607"], ["id", 1]]
+  ↳ app/controllers/books_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:31:in `update'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms | Allocations: 2831)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2023-06-28 10:08:30 -0600
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2262)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3011)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2023-06-28 10:09:32 -0600
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.6ms | Allocations: 1380)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3540)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 4284)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2023-06-28 10:09:36 -0600
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_inventory"=>{"title"=>"", "author"=>"Won-pyung Sohn", "year"=>"2017", "description"=>"Almond follows the story of Yunjae, who was born with a brain condition called Alexithymia that makes it hard for him to feel emotions."}, "button"=>"", "id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.8ms | Allocations: 2038)
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2147)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4244)
+Completed 422 Unprocessable Entity in 12ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 6094)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2023-06-28 10:09:41 -0600
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_inventory"=>{"title"=>"Almond", "author"=>"Won-pyung Sohn", "year"=>"2017", "description"=>"Almond follows the story of Yunjae, who was born with a brain condition called Alexithymia that makes it hard for him to feel emotions."}, "button"=>"", "id"=>"1"}
+  [1m[36mBookInventory Load (0.2ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1058)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2023-06-28 10:09:41 -0600
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBookInventory Load (0.1ms)[0m  [1m[34mSELECT "book_inventories".* FROM "book_inventories" WHERE "book_inventories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2275)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 3026)
+
+

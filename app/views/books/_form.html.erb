@@ -1,0 +1,26 @@
+
+<%= form_with model: @book do |form|%>
+    <%if form.object.errors.any? %>
+        <div>
+            <% form.object.errors.full_messages.each do |message|%>
+                <%= message%>
+            <%end%>
+        </div>
+    <%end%>
+    <div>
+    <%= form.label :title%>
+    <%= form.text_field :title%>
+
+    <%= form.label :author%>
+    <%= form.text_field :author%>
+
+    <%= form.label :year%>
+    <%= form.number_field :year%>
+    </div>
+    <div>
+     <%= form.label :description%>
+    <%= form.text_area  :description%>
+    </div>
+    <%= form.button "add book"  %>
+
+<%end%>
