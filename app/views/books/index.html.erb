@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore</title>
-</head>
-<body>
+
     <h1>Bookstore inventory</h1>
         <%= link_to "add book", new_book_path if user_signed_in? %>
         <% @books.each do |i|%>
@@ -14,6 +7,3 @@
             <h3><%= i.author %></h3>
             <p><%= i.description %></p>
         <% end%>
-
-</body>
-</html>
