@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Bookstore inventory</h1>
+        <%= link_to "add book", new_book_path if user_signed_in? %>
         <% @books.each do |i|%>
             <h2><%= link_to i.title, book_path(i.id) %></h2>
             <h3><%= i.year %></h3>
