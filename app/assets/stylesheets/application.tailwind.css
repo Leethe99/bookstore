@@ -11,3 +11,92 @@
 }
 
 */
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #cecece;
+  padding-bottom: 40px;
+}
+
+.navbar{
+  background-color: black;
+  padding: 25px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+h2{
+  color: white;
+  font-size: 50px;
+}
+.inv{
+  display: grid;
+  grid-template-columns: repeat(4,225px);
+  gap: 30px;
+  justify-content: center;
+}
+@media (max-width: 1000px){
+  .inv{
+    grid-template-columns: repeat(2,225px);
+  }
+}
+@media (max-width: 500px){
+  .inv{
+    grid-template-columns: repeat(1,225px);
+  }
+}
+.item{
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.priceAndQuantity{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qDetails{
+  display: flex;
+  justify-content: space-between;
+}
+.quantity{
+  color: black;
+  align-items: right;
+  font-size: 20px;
+}
+
+.buttons{
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+}
+
+
+i{
+
+  cursor: pointer;
+}
+
+.button_to{
+  color: white;
+}

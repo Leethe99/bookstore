@@ -1,9 +1,24 @@
 
-    <h1>Bookstore inventory</h1>
         <%= link_to "add book", new_book_path if user_signed_in? %>
+       <div class="inv" id="inv">
         <% @books.each do |i|%>
-            <h2><%= link_to i.title, book_path(i.id) %></h2>
-            <h3><%= i.year %></h3>
-            <h3><%= i.author %></h3>
-            <p><%= i.description %></p>
+
+        <div class="item">
+            <%= link_to i.title, book_path(i.id) %>
+            <div class="details">
+            <div class="priceAndQuantity">
+           <p> <%= i.year %></p>
+            <p><%= i.author %></p>
+            </div>
+            
+            <%= i.description %>
+            </div>
+            <div class="priceAndQuantity">
+                <p>cantidad</p>
+                <p>lugar</p>
+            </div>
+        </div>
+
         <% end%>
+       </div>
+       
