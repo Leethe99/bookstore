@@ -1,0 +1,12 @@
+
+        <%= link_to "add store", new_store_path if user_signed_in? %>
+       <div class="inv" id="inv">
+        <% @stores.each do |i|%>
+
+        <div class="item">
+            <%= link_to i.name, store_path(i.id) %>
+            <%=i.address %>
+            <%=i.phone %>    
+        <% end%>
+       </div>
+       

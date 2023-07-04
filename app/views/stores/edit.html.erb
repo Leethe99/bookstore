@@ -1,0 +1,5 @@
+<h1>edit</h1>
+
+<%= render partial: "form", locals: {store: @store} %>
+
+<%= button_to "delete", store_path(@store), method: :delete, data:{turbo_confirm: "are you sure?"} %> 

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   delete "books/:id", to: "books#destroy"  
   get "books/:id", to: "books#show", as: :book 
   post "books", to: "books#create", as: :book_inventories
+
+  # routes for stores 
+  resources :stores
   # Defines the root path route ("/")
   root "books#index"
 end

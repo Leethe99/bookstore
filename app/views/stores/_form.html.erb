@@ -1,0 +1,22 @@
+
+<%= form_with model: @store do |form|%>
+    <%if form.object.errors.any? %>
+        <div>
+            <% form.object.errors.full_messages.each do |message|%>
+                <%= message%>
+            <%end%>
+        </div>
+    <%end%>
+    <div>
+    <%= form.label :name%>
+    <%= form.text_field :name%>
+
+    <%= form.label :address%>
+    <%= form.text_field :address%>
+
+    <%= form.label :phone%>
+    <%= form.text_field :phone%>
+    </div>
+    <%= form.button "add store"  %>
+
+<%end%>

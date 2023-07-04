@@ -1,5 +1,7 @@
 
         <%= link_to "add book", new_book_path if user_signed_in? %>
+        <%= link_to "stores", stores_path  %>
+        
        <div class="inv" id="inv">
         <% @books.each do |i|%>
 
