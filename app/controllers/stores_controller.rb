@@ -17,7 +17,7 @@ class StoresController < ApplicationController
     def create
         @store = Store.new(store_params)         
         if @store.save 
-            redirect_to store_path
+            redirect_to stores_path
         else 
             render :new, status: :unprocessable_entity 
          end
@@ -36,7 +36,7 @@ class StoresController < ApplicationController
 
     def destroy
         @store.destroy
-        redirect_to root_path        
+        redirect_to stores_path        
     end
 
     private 
