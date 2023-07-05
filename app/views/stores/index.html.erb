@@ -4,9 +4,10 @@
         <% @stores.each do |i|%>
 
         <div class="item">
-            <%= link_to i.name, store_path(i.id) %>
+            <h3><%= link_to i.name, store_path(i.id) %></h3>
             <%=i.address %>
             <%=i.phone %>    
-        <% end%>
+        </div>
+        <% end%> 
        </div>
        
