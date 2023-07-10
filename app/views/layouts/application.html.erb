@@ -13,7 +13,9 @@
 
   <body>
     <div id="navbar" class="navbar">
-      <h2><%= link_to "Bookstore inventory", root_path %></h2>
+      <h3><%= link_to "Books", root_path %></h3>
+      <h3><%= link_to "Store", stores_path %></h3>
+
       <% if user_signed_in? %>
         <%#= link_to "Profile", edit_user_registration_path %>
         <%= button_to "Log out", destroy_user_session_path, method: :delete %>
